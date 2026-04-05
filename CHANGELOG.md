@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/tekojs/core/compare/v1.1.1...v1.1.2) (2026-04-05)
+
+
+### Bug Fixes
+
+* **import:** resolvendo import do projeto core ([e0d90fe](https://github.com/tekojs/core/commit/e0d90fed5498ddd00ca85fb7f629ad282e7f8291))
+
 ## [1.1.1](https://github.com/tekojs/core/compare/v1.1.0...v1.1.1) (2026-04-05)
 
 
