@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/tekojs/core/compare/v2.0.1...v2.0.2) (2026-04-06)
+
+
+### Bug Fixes
+
+* **lock:** corrgindo erro do lock ([a91bbaa](https://github.com/tekojs/core/commit/a91bbaa77c30eb5af630391cf133a1ca2f8a1cfa))
+
 ## [2.0.1](https://github.com/tekojs/core/compare/v2.0.0...v2.0.1) (2026-04-06)
 
 
