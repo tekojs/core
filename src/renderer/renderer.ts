@@ -8,8 +8,8 @@ export interface TekoRendererDeps {
   loader: { load: (path: string) => Promise<string> }
   views: { resolveView: (name: string) => string; resolveLayout: (name: string) => string; resolveComponent: (name: string) => string }
   components: { get: (name: string) => string | undefined }
-  helpers: Record<string, unknown>
-  directives: Record<string, unknown>
+  helpers: { get: (name: string) => unknown | undefined }
+  directives: { get: (name: string) => unknown | undefined }
 }
 
 export class TekoRenderer {
