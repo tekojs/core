@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/tekojs/core/compare/v2.0.0...v2.0.1) (2026-04-06)
+
+
+### Bug Fixes
+
+* **tyecheck:** reeolvendo erros de tipos ([86a0f80](https://github.com/tekojs/core/commit/86a0f80a0ff85a30a21fa436711be183f319d63f))
+
 ## [2.0.0](https://github.com/tekojs/core/compare/v1.1.2...v2.0.0) (2026-04-06)
 
 
