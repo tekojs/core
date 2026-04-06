@@ -96,6 +96,8 @@
     "target": "esnext"
   },
   "dependencies": {
+    "@tekojs/compiler": "^1.0.0",
+    "@tekojs/runtime": "^1.0.0",
     "@tekojs/types": "^1.2.0"
   }
 }
