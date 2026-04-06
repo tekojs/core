@@ -5,15 +5,15 @@ import { RenderCache } from './cache.js'
 
 export interface TekoRendererDeps {
   config: Required<TekoConfig>
-  loader: any
-  views: any
-  components: any
-  helpers: any
-  directives: any
+  loader: { load: (path: string) => Promise<string> }
+  views: { resolveView: (name: string) => string; resolveLayout: (name: string) => string; resolveComponent: (name: string) => string }
+  components: { get: (name: string) => string | undefined }
+  helpers: Record<string, unknown>
+  directives: Record<string, unknown>
 }
 
 export class TekoRenderer {
-  private cache = new RenderCache<any>()
+  private cache = new RenderCache<string>()
 
   constructor(private deps: TekoRendererDeps) {}
 
@@ -41,7 +41,7 @@ export class TekoRenderer {
 
         return this.deps.loader.load(this.deps.views.resolveComponent(name))
       },
-      renderTemplate: async (componentSource: string, componentState: RenderState, slots = {}) => {
+      renderTemplate: async (componentSource: string, componentState: RenderState, slots = {}): Promise<string> => {
         return this.renderRaw(componentSource, componentState, slots)
       },
     }, incomingSlots)

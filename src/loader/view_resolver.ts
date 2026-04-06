@@ -1,4 +1,4 @@
-import { resolve, join } from 'node:path'
+import { resolve } from 'node:path'
 import type { TekoConfig } from '../types.js'
 
 export class ViewResolver {
