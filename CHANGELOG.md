@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/tekojs/core/compare/v1.1.2...v2.0.0) (2026-04-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* **core:** muda toda estrutura
+
+### Features
+
+* **core:** novas funcionalidades centralizadas no core ([7274fd3](https://github.com/tekojs/core/commit/7274fd3b6e94ce669d29accfa9da573600a18423))
+
+
+### Bug Fixes
+
+* **types:** corrigindo erros de types ([b980a5e](https://github.com/tekojs/core/commit/b980a5e236bec417bbc876be3f050bbcaa90b9e6))
+
 ## [1.1.2](https://github.com/tekojs/core/compare/v1.1.1...v1.1.2) (2026-04-05)
 
 
