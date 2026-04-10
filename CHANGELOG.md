@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.1.0](https://github.com/tekojs/core/compare/v2.0.2...v2.1.0) (2026-04-10)
+
+
+### Features
+
+* **teko:** teste para modulo teko rpincipal ([73a3586](https://github.com/tekojs/core/commit/73a35865f80f69bfdf25717fa7bcfdf27e2f58c8))
+* **test:** add t8ngs para teste ([95eeae5](https://github.com/tekojs/core/commit/95eeae53d096c58ff24c9cf1deffe67d809efd4f))
+* **test:** core initial suite ([#8](https://github.com/tekojs/core/issues/8)) ([63d3856](https://github.com/tekojs/core/commit/63d385642b8ce00eac57c32e2b8d48a41ee7100f))
+* **testes:** add cobertura de teste para o teko ([9cd6ad2](https://github.com/tekojs/core/commit/9cd6ad2582bd72b18b2e9a91d335043fdcf923a9))
+
+
+### Bug Fixes
+
+* **parse:** add correcao em parse do teste ([ebaf277](https://github.com/tekojs/core/commit/ebaf27715f8fecc2c1d601f24e697f0bbe261e39))
+
 ## [2.0.2](https://github.com/tekojs/core/compare/v2.0.1...v2.0.2) (2026-04-06)
 
 
