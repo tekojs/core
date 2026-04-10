@@ -50,6 +50,7 @@
     "@arapucajs/tsconfig": "^1.0.0",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
+    "@swc/core": "^1.15.24",
     "@t8ngs/assert": "^1.0.0",
     "@t8ngs/runner": "^1.0.1",
     "@types/node": "^25.5.2",
@@ -64,6 +65,7 @@
     "husky": "^9.1.7",
     "prettier": "^3.5.2",
     "qs": "^6.15.0",
+    "ts-node-maintained": "^10.9.6",
     "tsdown": "^0.21.7",
     "tsup": "^8.5.1",
     "typescript": "^6.0.2"

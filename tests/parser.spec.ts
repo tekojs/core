@@ -1,34 +1,35 @@
-import test from 'node:test'
-import assert from 'node:assert/strict'
-
 import { parse } from '../src/internal/parser.js'
+import { test } from '@t8ngs/runner'
+import type { TekoNode } from '@tekojs/types'
 
-test('parse should handle simple expression', () => {
-  const ast = parse('Hello {{ name }}')
-  assert.ok(ast.length > 0)
-})
+test.group('Parser', () => {
+  test('parse should handle simple expression', ({ assert }) => {
+    const ast = parse('Hello {{ name }}')
+    assert.ok(ast.body.length > 0)
+  })
 
-test('parse should handle if block', () => {
-  const ast = parse('@if(user)\n<p>ok</p>\n@end')
+  test('parse should handle if block', ({ assert }) => {
+    const ast = parse('@if(user)\n<p>ok</p>\n@end')
 
-  const ifNode = ast.find((n: any) => n.type === 'If')
-  assert.ok(ifNode)
-  assert.equal(ifNode.condition, 'user')
-})
+    const ifNode = ast.body.find((n: TekoNode) => n.type === 'If')
+    assert.ok(ifNode)
+    assert.equal(ifNode.test, 'user')
+  })
 
-test('parse should handle each block', () => {
-  const ast = parse('@each(post in posts)\n{{ post }}\n@end')
+  test('parse should handle each block', ({ assert }) => {
+    const ast = parse('@each(post in posts)\n{{ post }}\n@end')
 
-  const eachNode = ast.find((n: any) => n.type === 'Each')
-  assert.ok(eachNode)
-  assert.equal(eachNode.item, 'post')
-  assert.equal(eachNode.list, 'posts')
-})
+    const eachNode = ast.body.find((n: TekoNode) => n.type === 'Each')
+    assert.ok(eachNode)
+    assert.equal(eachNode.item, 'post')
+    assert.equal(eachNode.iterable, 'posts')
+  })
 
-test('parse should handle component', () => {
-  const ast = parse('@ui.button({})\nClick\n@end')
+  test('parse should handle component', ({ assert }) => {
+    const ast = parse('@ui.button({})\nClick\n@end')
 
-  const comp = ast.find((n: any) => n.type === 'Component')
-  assert.ok(comp)
-  assert.equal(comp.name, 'ui.button')
+    const comp = ast.body.find((n: TekoNode) => n.type === 'Component')
+    assert.ok(comp)
+    assert.equal(comp.name, 'ui.button')
+  })
 })
