@@ -13,7 +13,7 @@ test.group('Parser', () => {
 
     const ifNode = ast.body.find((n: TekoNode) => n.type === 'If')
     assert.ok(ifNode)
-    assert.equal(ifNode.test, 'user')
+    assert.equal(ifNode!.test, 'user')
   })
 
   test('parse should handle each block', ({ assert }) => {
@@ -21,8 +21,8 @@ test.group('Parser', () => {
 
     const eachNode = ast.body.find((n: TekoNode) => n.type === 'Each')
     assert.ok(eachNode)
-    assert.equal(eachNode.item, 'post')
-    assert.equal(eachNode.iterable, 'posts')
+    assert.equal(eachNode!.item, 'post')
+    assert.equal(eachNode!.iterable, 'posts')
   })
 
   test('parse should handle component', ({ assert }) => {
@@ -30,6 +30,6 @@ test.group('Parser', () => {
 
     const comp = ast.body.find((n: TekoNode) => n.type === 'Component')
     assert.ok(comp)
-    assert.equal(comp.name, 'ui.button')
+    assert.equal(comp!.name, 'ui.button')
   })
 })
