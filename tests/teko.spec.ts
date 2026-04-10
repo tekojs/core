@@ -1,29 +1,29 @@
-import test from 'node:test'
-import assert from 'node:assert/strict'
-
 import { createTeko } from '../src/teko.js'
+import { test } from '@t8ngs/runner'
 
-test('createTeko should initialize', () => {
-  const teko = createTeko()
-  assert.ok(teko)
-})
-
-test('renderRaw should render template', async () => {
-  const teko = createTeko()
-
-  const html = await teko.renderRaw('Hello {{ name }}', {
-    name: 'Jefte',
+test.group('Teko', () => {
+  test('createTeko should initialize', ({ assert }) => {
+    const teko = createTeko()
+    assert.ok(teko)
   })
 
-  assert.equal(html.includes('Jefte'), true)
-})
+  test('renderRaw should render template', async ({ assert }) => {
+    const teko = createTeko()
 
-test('share should inject global data', async () => {
-  const teko = createTeko()
+    const html = await teko.renderRaw('Hello {{ name }}', {
+      name: 'Jefte',
+    })
 
-  teko.share({ appName: 'Teko' })
+    assert.equal(html.includes('Jefte'), true)
+  })
 
-  const html = await teko.renderRaw('{{ appName }}')
+  test('share should inject global data', async ({ assert }) => {
+    const teko = createTeko()
 
-  assert.equal(html.includes('Teko'), true)
+    teko.share({ appName: 'Teko' })
+
+    const html = await teko.renderRaw('{{ appName }}')
+
+    assert.equal(html.includes('Teko'), true)
+  })
 })
