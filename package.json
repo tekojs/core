@@ -100,8 +100,8 @@
     "target": "esnext"
   },
   "dependencies": {
-    "@tekojs/compiler": "^1.0.0",
-    "@tekojs/runtime": "^1.0.0",
+    "@tekojs/compiler": "^1.1.0",
+    "@tekojs/runtime": "^1.0.1",
     "@tekojs/types": "^1.2.0"
   }
 }
